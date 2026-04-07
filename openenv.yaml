@@ -1,0 +1,101 @@
+name: OffroadSegNet ML Debugging Environment
+version: 2.0.0
+description: |
+  Realistic ML engineering environment simulating OffroadSegNet semantic segmentation
+  optimization. Agent acts as ML engineer diagnosing and fixing model performance issues
+  while respecting compute constraints. Features realistic ML dynamics: training plateaus,
+  overfitting curves, class imbalance effects, instability from poor hyperparameters.
+author: ML Systems Architecture
+license: MIT
+
+entry_point: environment:Environment
+observation_schema: models:Observation
+action_schema: models:Action
+reward_schema: models:Reward
+
+tasks:
+  easy:
+    title: "IoU Improvement (Baseline)"
+    description: "Improve Mean IoU from 0.167 (baseline) to >= 0.50"
+    target: "Achieve acceptable segmentation performance"
+    difficulty: "⭐"
+    grader: graders:EasyTaskGrader.score
+    success_threshold: 0.90
+    
+  medium:
+    title: "IoU + Generalization"
+    description: "Improve Mean IoU to >= 0.55 while preventing overfitting"
+    target: "Achieve good performance without overfitting"
+    difficulty: "⭐⭐"
+    grader: graders:MediumTaskGrader.score
+    success_threshold: 0.90
+    
+  hard:
+    title: "Multi-Objective Optimization"
+    description: |
+      Simultaneously optimize:
+      - Mean IoU >= 0.65 (40% weight)
+      - Sky class IoU >= 0.50 (30% weight)  
+      - Compute efficiency (15% weight)
+      - Training stability (15% weight)
+    target: "Expert-level multi-objective optimization"
+    difficulty: "⭐⭐⭐"
+    grader: graders:HardTaskGrader.score
+    success_threshold: 0.85
+
+environment_params:
+  target_iou: 0.50
+  initial_compute: 30  # minutes
+  max_steps: 50
+  deterministic: true
+
+supported_actions:
+  - adjust_learning_rate: "Fix learning rate instability (0.01 → 0.001)"
+  - enable_augmentation: "Apply data augmentation (rotation, flip, color jitter)"
+  - increase_regularization: "Add L2 regularization to prevent overfitting"
+  - switch_optimizer: "Switch from SGD to AdamW"
+  - enable_class_balancing: "Enable focal loss and class reweighting"
+  - reduce_batch_size: "Reduce batch size from 32 to 16 for memory efficiency"
+  - run_training_epoch: "Train for one epoch (costs 5-6 minutes compute)"
+  - early_stop_training: "Terminate training to preserve compute budget"
+
+observation_features:
+  - report: "Structured experiment report with metrics and diagnostics"
+  - mean_iou: "Mean Intersection over Union across all classes"
+  - road_iou: "IoU for critical road detection class"
+  - vegetation_iou: "IoU for vegetation segmentation"
+  - sky_iou: "IoU for sky segmentation (challenging minority class)"
+  - epoch: "Current training epoch"
+  - compute_remaining_minutes: "Remaining compute budget"
+  - overfitting: "Whether model is overfitting (val loss > train loss)"
+  - instability: "Whether training is unstable"
+
+reward_components:
+  - iou_reward: "Reward for IoU improvement"
+  - coverage_reward: "Bonus for learning previously-ignored classes"
+  - efficiency_reward: "Reward for thoughtful compute usage"
+  - penalty: "Penalty for instability, overfitting, wasted actions"
+
+requirements:
+  - pydantic>=2.0
+  - openai>=1.0
+
+optional_features:
+  - openai_integration: "Use OpenAI API for agent decision-making"
+  - deterministic_seeding: "Reproducible runs with seed parameter"
+  - comprehensive_evaluation: "Evaluation across all task difficulties"
+  - detailed_reporting: "Structured experiment analysis in observations"
+
+expected_performance:
+  random_agent:
+    easy_score: 0.35-0.50
+    medium_score: 0.20-0.40
+    hard_score: 0.15-0.35
+  heuristic_agent:
+    easy_score: 0.85-1.00
+    medium_score: 0.70-0.95
+    hard_score: 0.60-0.80
+  expert_agent:
+    easy_score: 1.00
+    medium_score: 0.95-1.00
+    hard_score: 0.85-1.00
