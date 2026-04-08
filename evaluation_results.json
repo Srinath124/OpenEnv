@@ -1,0 +1,542 @@
+{
+  "summary": {
+    "timestamp": "2026-04-08T21:25:22.838706",
+    "total_steps": 60,
+    "total_reward": -12.450000000000001,
+    "avg_score": 0.2668648018648019,
+    "avg_iou": 0.16666666666666666,
+    "success_rate": 0.0,
+    "task_results": {
+      "easy": {
+        "final_iou": 0.16666666666666666,
+        "task_score": 0.3,
+        "steps": 20,
+        "reward": -4.15
+      },
+      "medium": {
+        "final_iou": 0.16666666666666666,
+        "task_score": 0.303030303030303,
+        "steps": 20,
+        "reward": -4.15
+      },
+      "hard": {
+        "final_iou": 0.16666666666666666,
+        "task_score": 0.19756410256410256,
+        "steps": 20,
+        "reward": -4.15
+      }
+    }
+  },
+  "detailed_results": {
+    "easy": {
+      "task": "easy",
+      "final_state": {
+        "epoch": 0,
+        "mean_iou": 0.16666666666666666,
+        "road_iou": 0.4,
+        "vegetation_iou": 0.1,
+        "sky_iou": 0.0,
+        "overfitting": false,
+        "instability": true,
+        "remaining_compute": 10,
+        "train_loss": 1.2,
+        "val_loss": 1.5,
+        "optimizer": "sgd",
+        "learning_rate": 0.01,
+        "batch_size": 32,
+        "class_balancing": true,
+        "augmentation": 0,
+        "regularization": 0.0,
+        "termination_reason": "max_steps",
+        "total_reward": -4.15
+      },
+      "task_score": 0.3,
+      "trajectory": [
+        {
+          "step": 1,
+          "action": "enable_class_balancing",
+          "reward": 0.22000000000000003,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 29
+        },
+        {
+          "step": 2,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 28
+        },
+        {
+          "step": 3,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 27
+        },
+        {
+          "step": 4,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 26
+        },
+        {
+          "step": 5,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 25
+        },
+        {
+          "step": 6,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 24
+        },
+        {
+          "step": 7,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 23
+        },
+        {
+          "step": 8,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 22
+        },
+        {
+          "step": 9,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 21
+        },
+        {
+          "step": 10,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 20
+        },
+        {
+          "step": 11,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 19
+        },
+        {
+          "step": 12,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 18
+        },
+        {
+          "step": 13,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 17
+        },
+        {
+          "step": 14,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 16
+        },
+        {
+          "step": 15,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 15
+        },
+        {
+          "step": 16,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 14
+        },
+        {
+          "step": 17,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 13
+        },
+        {
+          "step": 18,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 12
+        },
+        {
+          "step": 19,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 11
+        },
+        {
+          "step": 20,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 10
+        }
+      ],
+      "steps_taken": 20,
+      "total_reward": -4.15,
+      "final_iou": 0.16666666666666666,
+      "termination_reason": "max_steps"
+    },
+    "medium": {
+      "task": "medium",
+      "final_state": {
+        "epoch": 0,
+        "mean_iou": 0.16666666666666666,
+        "road_iou": 0.4,
+        "vegetation_iou": 0.1,
+        "sky_iou": 0.0,
+        "overfitting": false,
+        "instability": true,
+        "remaining_compute": 10,
+        "train_loss": 1.2,
+        "val_loss": 1.5,
+        "optimizer": "sgd",
+        "learning_rate": 0.01,
+        "batch_size": 32,
+        "class_balancing": true,
+        "augmentation": 0,
+        "regularization": 0.0,
+        "termination_reason": "max_steps",
+        "total_reward": -4.15
+      },
+      "task_score": 0.303030303030303,
+      "trajectory": [
+        {
+          "step": 1,
+          "action": "enable_class_balancing",
+          "reward": 0.22000000000000003,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 29
+        },
+        {
+          "step": 2,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 28
+        },
+        {
+          "step": 3,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 27
+        },
+        {
+          "step": 4,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 26
+        },
+        {
+          "step": 5,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 25
+        },
+        {
+          "step": 6,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 24
+        },
+        {
+          "step": 7,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 23
+        },
+        {
+          "step": 8,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 22
+        },
+        {
+          "step": 9,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 21
+        },
+        {
+          "step": 10,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 20
+        },
+        {
+          "step": 11,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 19
+        },
+        {
+          "step": 12,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 18
+        },
+        {
+          "step": 13,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 17
+        },
+        {
+          "step": 14,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 16
+        },
+        {
+          "step": 15,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 15
+        },
+        {
+          "step": 16,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 14
+        },
+        {
+          "step": 17,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 13
+        },
+        {
+          "step": 18,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 12
+        },
+        {
+          "step": 19,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 11
+        },
+        {
+          "step": 20,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 10
+        }
+      ],
+      "steps_taken": 20,
+      "total_reward": -4.15,
+      "final_iou": 0.16666666666666666,
+      "termination_reason": "max_steps"
+    },
+    "hard": {
+      "task": "hard",
+      "final_state": {
+        "epoch": 0,
+        "mean_iou": 0.16666666666666666,
+        "road_iou": 0.4,
+        "vegetation_iou": 0.1,
+        "sky_iou": 0.0,
+        "overfitting": false,
+        "instability": true,
+        "remaining_compute": 10,
+        "train_loss": 1.2,
+        "val_loss": 1.5,
+        "optimizer": "sgd",
+        "learning_rate": 0.01,
+        "batch_size": 32,
+        "class_balancing": true,
+        "augmentation": 0,
+        "regularization": 0.0,
+        "termination_reason": "max_steps",
+        "total_reward": -4.15
+      },
+      "task_score": 0.19756410256410256,
+      "trajectory": [
+        {
+          "step": 1,
+          "action": "enable_class_balancing",
+          "reward": 0.22000000000000003,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 29
+        },
+        {
+          "step": 2,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 28
+        },
+        {
+          "step": 3,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 27
+        },
+        {
+          "step": 4,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 26
+        },
+        {
+          "step": 5,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 25
+        },
+        {
+          "step": 6,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 24
+        },
+        {
+          "step": 7,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 23
+        },
+        {
+          "step": 8,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 22
+        },
+        {
+          "step": 9,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 21
+        },
+        {
+          "step": 10,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 20
+        },
+        {
+          "step": 11,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 19
+        },
+        {
+          "step": 12,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 18
+        },
+        {
+          "step": 13,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 17
+        },
+        {
+          "step": 14,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 16
+        },
+        {
+          "step": 15,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 15
+        },
+        {
+          "step": 16,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 14
+        },
+        {
+          "step": 17,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 13
+        },
+        {
+          "step": 18,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 12
+        },
+        {
+          "step": 19,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 11
+        },
+        {
+          "step": 20,
+          "action": "enable_class_balancing",
+          "reward": -0.23,
+          "mean_iou": 0.16666666666666666,
+          "compute_remaining": 10
+        }
+      ],
+      "steps_taken": 20,
+      "total_reward": -4.15,
+      "final_iou": 0.16666666666666666,
+      "termination_reason": "max_steps"
+    }
+  }
+}
